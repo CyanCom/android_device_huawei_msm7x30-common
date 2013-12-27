@@ -143,9 +143,7 @@ PRODUCT_COPY_FILES += \
 
 ## Ramdisk Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/init.huawei.rc:root/init.huawei.rc \
-    $(LOCAL_PATH)/ramdisk/init.huawei.usb.rc:root/init.huawei.usb.rc \
-    $(LOCAL_PATH)/ramdisk/ueventd.huawei.rc:root/ueventd.huawei.rc
+    $(call find-copy-subdir-files,*,device/huawei/msm7x30-common/ramdisk,root)
 
 ## ETC
 PRODUCT_COPY_FILES += \
