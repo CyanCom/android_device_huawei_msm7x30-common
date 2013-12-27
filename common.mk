@@ -201,3 +201,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 $(call inherit-product, build/target/product/full_base_telephony.mk)
+
+## Enable USB mass storage (and adb) at boot.
+ADDITIONAL_DEFAULT_PROPERTIES := \
+    persist.sys.usb.config=mass_storage,adb \
+    persist.service.adb.enable=1 \
+    ro.secure=0 \
+    ro.adb.secure=0
