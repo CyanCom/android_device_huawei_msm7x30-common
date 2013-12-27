@@ -1,4 +1,4 @@
-# Copyright (C) 2012 The ShenDuOS Project
+# Copyright (C) 2012 The CyanCom Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -204,7 +204,7 @@ $(call inherit-product, build/target/product/full_base_telephony.mk)
 
 ## Enable USB mass storage (and adb) at boot.
 ADDITIONAL_DEFAULT_PROPERTIES := \
-    persist.sys.usb.config=mass_storage,adb \
+    persist.sys.usb.config=mass_storage \
     persist.service.adb.enable=1 \
     ro.secure=0 \
     ro.adb.secure=0
