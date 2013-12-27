@@ -13,6 +13,8 @@
 # limitations under the License.
 #
 
+TARGET_SPECIFIC_HEADER_PATH := device/huawei/msm7x30-common/include
+
 USE_CAMERA_STUB := false
 
 ## Platform
@@ -148,10 +150,6 @@ RECOVERY_CHARGEMODE := true
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
 TARGET_RECOVERY_INITRC := device/huawei/msm7x30-common/recovery/recovery.rc
 BOARD_RECOVERY_RMT_STORAGE := true
-BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/msm7x30-common/recovery/graphics_cn.c
-
-## ETC
-TARGET_SPECIFIC_HEADER_PATH := device/huawei/msm7x30-common/include
 
 ## Legacy Touchscreen
 BOARD_USE_LEGACY_TOUCHSCREEN := true
