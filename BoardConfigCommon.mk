@@ -101,18 +101,15 @@ TARGET_FORCE_CPU_UPLOAD := true
 WEBCORE_INPAGE_VIDEO := true
 
 ## Wlan
-WPA_SUPPLICANT_VERSION           := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER      := WEXT
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
-BOARD_WLAN_DEVICE                := bcm4329
-WIFI_DRIVER_MODULE_NAME          := "bcm4329"
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcm4329.ko"
-WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/fw_bcm4329.bin"
-WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/fw_bcm4329_apsta.bin"
-WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/vendor/firmware/fw_bcm4329.bin nvram_path=/system/vendor/firmware/nvram.txt"
-
-## flag for huawei
-BOARD_USE_HUAWEI_BCM_WIFI := true
+BOARD_WLAN_DEVICE := bcm4329
+WIFI_DRIVER_MODULE_NAME := "bcm4329"
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/bcm4329.ko"
+WIFI_DRIVER_FW_PATH_STA := "/system/vendor/firmware/fw_bcm4329.bin"
+WIFI_DRIVER_FW_PATH_AP  := "/system/vendor/firmware/fw_bcm4329_apsta.bin"
+WIFI_DRIVER_MODULE_ARG  := "firmware_path=/system/vendor/firmware/fw_bcm4329.bin nvram_path=/system/vendor/firmware/nvram.txt"
 
 ## Bluetooth
 BOARD_HAVE_BLUETOOTH := true
