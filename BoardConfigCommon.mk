@@ -150,9 +150,8 @@ TARGET_RECOVERY_INITRC := device/huawei/msm7x30-common/recovery/recovery.rc
 BOARD_RECOVERY_RMT_STORAGE := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/msm7x30-common/recovery/graphics_cn.c
 
-## Custom releasetools for old partition table.
-#TARGET_PROVIDES_RELEASETOOLS := true
-
 ## ETC
 TARGET_SPECIFIC_HEADER_PATH := device/huawei/msm7x30-common/include
 
+## Legacy Touchscreen
+BOARD_USE_LEGACY_TOUCHSCREEN := true
