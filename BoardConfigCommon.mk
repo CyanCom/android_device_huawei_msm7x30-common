@@ -69,18 +69,13 @@ TARGET_USES_ION := false
 TARGET_NO_HW_VSYNC := true
 TARGET_NO_HDMI := true
 BOARD_EGL_NEEDS_LEGACY_FB := true
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_QCOM_DISPLAY_VARIANT := legacy
 TARGET_QCOM_MEDIA_VARIANT := legacy
-COMMON_GLOBAL_CFLAGS += -DGENLOCK_IOC_DREADLOCK -DANCIENT_GL
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
 BOARD_EGL_CFG := device/huawei/msm7x30-common/egl.cfg
-DCHECK_FOR_EXTERNAL_FORMAT := true
 USE_OPENGL_RENDERER := true
-BOARD_OVERLAY_MINIFICATION_LIMIT := 2
-BOARD_NO_RGBX_8888 := true
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USE_SKIA_LCDTEXT := true
 TARGET_QCOM_LEGACY_OMX := true
@@ -110,6 +105,7 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/bcm4329.ko"
 WIFI_DRIVER_FW_PATH_STA := "/system/vendor/firmware/fw_bcm4329.bin"
 WIFI_DRIVER_FW_PATH_AP  := "/system/vendor/firmware/fw_bcm4329_apsta.bin"
 WIFI_DRIVER_MODULE_ARG  := "firmware_path=/system/vendor/firmware/fw_bcm4329.bin nvram_path=/system/vendor/firmware/nvram.txt"
+BOARD_USE_HUAWEI_BCM_WIFI := true
 
 ## Bluetooth
 BOARD_HAVE_BLUETOOTH := true
