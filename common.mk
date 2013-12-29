@@ -17,8 +17,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-ADDITIONAL_DEFAULT_PROPERTIES += persist.service.adb.enable=1
-
 ## Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapers \
@@ -43,7 +41,6 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libQcomUI \
     libtilerenderer \
-    libI420colorconvert \
     libc2dcolorconvert
 
 ## Audio
@@ -98,13 +95,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.emmc.sdcard.partition=14 \
     ro.vold.umsdirtyratio=50 \
     ro.emmc=1
-
-## dalvik vm
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=5m \
-    dalvik.vm.heapgrowthlimit=64m \
-    dalvik.vm.heapsize=128m \
-    dalvik.vm.dexopt-data-only=0
 
 ## system prop for opengles version
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -211,3 +201,6 @@ ADDITIONAL_DEFAULT_PROPERTIES := \
     persist.service.adb.enable=1 \
     ro.secure=0 \
     ro.adb.secure=0
+
+## Dalvik Heap
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
